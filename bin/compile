@@ -269,8 +269,8 @@ fi
 
 # install dependencies
 chmod +x ./scripts/installer.sh
-./scripts/installer.sh -cvf | indent
-#composer install --no-dev --prefer-dist --optimize-autoloader --no-interaction | indent
+./scripts/installer.sh -cvDVf | indent
+composer install --no-dev --prefer-dist --optimize-autoloader --no-interaction | indent
 
 status "Building runtime environment..."
 
