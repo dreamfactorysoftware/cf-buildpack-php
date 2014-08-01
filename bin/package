@@ -24,6 +24,7 @@ excluded_files=(
   '.git/'
   '.gitignore'
   '.gitmodules'
+  '.idea/'
   'repos/'
   'cf_spec/'
   'log/'
