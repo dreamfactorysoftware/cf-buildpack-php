@@ -182,7 +182,7 @@ trap 'trap - EXIT; echo "Going down, terminating child processes..." >&2; jobs -
 echo "Starting log redirection..." >&2
 ( touch "/tmp/heroku.php-fpm.$PORT.log" "/tmp/heroku.apache2_error.$PORT.log" "/tmp/heroku.apache2_access.$PORT.log"; tail -qF -n 0 /tmp/heroku.*.$PORT.log 1>&2; echo "tail heroku.*.$PORT.log"; ) > $wait_pipe &
 echo "Starting dreamfactory log redirection..." >&2
-(  tail -qF -n 0 ${HOME}/app/log/*.log 1>&2; echo "tail ${HOME}/app/log/*.log"; ) > $wait_pipe &
+(  tail -qF -n 0 ${HOME}/log/*.log 1>&2; echo "tail ${HOME}/log/*.log"; ) > $wait_pipe &
 # start FPM; write "php-fpm" to the shared pipe if it exits
 echo "Starting php-fpm..." >&2
 ( php-fpm --nodaemonize -y "$fpm_config" -c "$php_config"; echo "php-fpm"; ) > $wait_pipe &
