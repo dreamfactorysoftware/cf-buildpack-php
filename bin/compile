@@ -268,8 +268,8 @@ unset COMPOSER_GITHUB_OAUTH_TOKEN
 fi
 
 # install dependencies
-chmod +x ./scripts/installer.sh
-./scripts/installer.sh -cvDVf | indent
+#chmod +x ./scripts/installer.sh
+#./scripts/installer.sh -cvDVf | indent
 composer install --no-dev --prefer-dist --optimize-autoloader --no-interaction | indent
 
 status "Building runtime environment..."
